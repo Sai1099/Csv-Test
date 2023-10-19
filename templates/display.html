@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Files in MongoDB Collection</title>
+</head>
+<body>
+    <h1>Files in MongoDB Collection</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>File Size (bytes)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for file in files %}
+                <tr>
+                    <td>{{ file.filename }}</td>
+                    <td>{{ file.length }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

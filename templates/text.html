@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data from Database</title>
+</head>
+<body>
+    <h1>Data from Database</h1>
+    <form>
+        <label for="gmail">Gmail:</label>
+        <input type="text" id="gmail" name="gmail" value="{{ data.gmail | default('') }}"><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ data.name | default('') }}"><br>
+
+        <label for="role">Role:</label>
+        <input type="text" id="role" name="role" value="{{ data.role | default('') }}"><br>
+
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender" value="{{ data.gender | default('') }}"><br>
+
+        <input type="submit" value="Update Data">
+    </form>
+</body>
+</html>
