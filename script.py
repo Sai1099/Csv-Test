@@ -32,11 +32,11 @@ def index():
             
    # Close the MongoDB connection
             
-            files = list(collection.find())
-            return render_template('display.html', files=files)
-            
-        client.close()
+            data = list(collection.find())
 
+            return render_template('dashboard.html', data=data)
+    client.close()        
+    
     return render_template('index.html')
 
 
