@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MongoDB Data Viewer</title>
+</head>
+<body>
+    <h1>Data Viewer</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Data</th>
+            <th>Tags</th>
+        </tr>
+        {% for doc in data %}
+        <tr>
+            <td>{{ doc._id }}</td>
+            <td>{{ doc.data }}</td>
+            <td>{{ doc.tags }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Add Tags</h2>
+    <form method="post" action="/add_tags">
+        <label for="doc_id">Document ID:</label>
+        <input type="text" name="doc_id" id="doc_id" required><br>
+        <label for="tags">Tags (comma-separated):</label>
+        <input type="text" name="tags" id="tags" required><br>
+        <input type="submit" value="Add Tags">
+    </form>
+</body>
+</html>
